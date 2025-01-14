@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <script>
+        function hitung() {
+            const angka1 = parseFloat(prompt('Masukkan angka pertama:'));
+            const angka2 = parseFloat(prompt('Masukkan angka kedua:'));
+            let hasilPenambahan, hasilPengurangan, hasilPerkalian, hasilPembagian;
+
+            if (isNaN(angka1) || isNaN(angka2)) {
+                alert("Error: Masukkan angka yang valid.");
+            } else {
+                hasilPenambahan = angka1 + angka2;
+                hasilPengurangan = angka1 - angka2;
+                hasilPerkalian = angka1 * angka2;
+                hasilPembagian = angka2 !== 0 ? angka1 / angka2 : "Error: Pembagian dengan nol tidak diperbolehkan.";
+
+                alert(`Hasil:
+- Penambahan: ${hasilPenambahan}
+- Pengurangan: ${hasilPengurangan}
+- Perkalian: ${hasilPerkalian}
+- Pembagian: ${hasilPembagian}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+    <button onclick="hitung()">Mulai Hitung</button>
+</body>
+</html>
